@@ -2,6 +2,7 @@
   --main-color: #070F21;
   --bg-circle-lightblue: #27E1BF;
   --gray-border:#EBECED;
+  --bg-gray-sidebar:#F6F6FF;
 }
 * {
   box-sizing: border-box;
@@ -22,6 +23,19 @@ a {
 li {
   list-style: none;
 }
+
+/* for show / hide items  */
+
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -29,6 +43,3 @@ li {
 .main-container{
   display: flex;
 }  
-.main-container .sidebar{
-
-}

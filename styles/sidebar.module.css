@@ -1,8 +1,17 @@
 .sidebarContainer {
     width: 270px;
-    border: 2px solid olivedrab;
-    min-height: 100vh;
+    border-right: 1px solid var(--gray-border);
+    transition: all 0.5s ease-in-out;
 }
+
+/* close sidebar width  */
+.CloseSidebarContainer{
+    width: 72px;
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+    border-right: 1px solid var(--gray-border);
+}
+
 .logoContainer{
     display: flex;
     align-items: center;
@@ -12,7 +21,6 @@
     border-bottom: 1px solid var(--gray-border);
 }
 .logoDiv{
-    display: flex;
     align-items: center;
     column-gap: 4px;
 }
@@ -27,6 +35,22 @@
     border-radius: 50%;
     background-color: var(--bg-circle-lightblue);
 }
+.sidebarCloseBtn{
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+.sidebarIcon{
+    width: max-content;
+}
+.CloseSidebarIcon {
+    background-color: var(--bg-gray-sidebar);
+}
+.sidebarIcon:hover {
+    background-color: var(--bg-gray-sidebar);
+    transition: all 0.3s ease-in-out;
+}
 .menuContainer {
     padding: 15px 26px 15px 15px;
     border-bottom: 1px solid var(--gray-border);
@@ -40,7 +64,7 @@
     cursor: pointer;
 }
 .listItem:hover{
-    background-color: #F6F6FF;
+    background-color: var(--bg-gray-sidebar);
     transition: all 0.3s ease-in-out;
     border-radius: 8px;
 }
@@ -49,8 +73,9 @@
     font-size: 15px;
     line-height: 20px;
 }
+
 .activeItem{
-    background-color: #F6F6FF;
+    background-color: var(--bg-gray-sidebar);
     border-radius: 8px;
 }
 .companyItem{
