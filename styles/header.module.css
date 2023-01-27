@@ -1,0 +1,114 @@
+.headerContainer{
+height: 76px;
+display: flex;
+align-items: center;
+border-bottom: 1px solid var(--gray-border);
+padding: 0 30px;
+}
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.headerDiv{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.userNotifcations{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+.userContainer{
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 0 5px 0 4px;
+    background-color: #F0F1F2;
+    height: 100%;
+}
+.userList {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+.userPic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.notificationCounter {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    width: 24px;
+    height: 20px;
+    color: var(--white);
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+}
+.userDivider{
+    width: 1px;
+    height: 24px;
+    margin: 0 8px;
+    background-color: var(--main-color);
+    opacity: 0.1;
+}
+.dropDownIcon{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--gray-border);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--white);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+.IconGroup{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.IconWrapper{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+.plusBgColor{
+    background-color: var(--blue);
+}
+.searchBar{
+    display: flex;
+    padding: 10px 12px;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    column-gap: 8px;
+    width: 100%;
+    margin: 0 8px;
+}
+.searchInput {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #070F21;
+    opacity: 0.4;
+}
+.userProfilePic{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    flex: 3;
+}

@@ -1,3 +1,4 @@
+import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
 import Head from 'next/head'
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
         <Sidebar/>
        </div>
         <div className='main-content'>
-          <h1>Hello word</h1>
+          <Header/>
         </div>
         </div>
       </main>
