@@ -83,8 +83,16 @@ padding: 0 30px;
     place-content: center;
     cursor: pointer;
 }
+.IconWrapper:hover{
+    background-color: var(--bg-gray-sidebar);
+    transition: all 0.2s ease-in-out;
+}
 .plusBgColor{
     background-color: var(--blue);
+}
+.plusBgColor:hover{
+    background-color: var(--blue);
+    opacity: 0.8 !important;
 }
 .searchBar{
     display: flex;
@@ -110,5 +118,38 @@ padding: 0 30px;
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    flex: 3;
+}
+
+/* mobile responsive  */
+
+@media screen and (max-width:767px){
+    .headerContainer{
+        padding: 0 12px;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .headerDiv{
+        width: 242px;
+        overflow-x: scroll;
+    }
+    .searchInput{
+        width: 160px;
+    }
+
+    .hiddenMobile{
+        display: none;
+    }
+    .blockMobile{
+        display: block;
+    }
+    .flexMobile{
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width:768px){
+    .hidden {
+        display: none;
+    }
 }

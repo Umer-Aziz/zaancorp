@@ -44,9 +44,24 @@ const Header = () => {
                     <img src="/icons/search.svg" alt="search icon" />
                     <input className={style.searchInput} type="text" placeholder='Search' />
                    </div>
+                   {/* Icon Divider  */}
+                   <div className={`${style.IconGroup} ${style.hidden}`}>
+                   <div className={style.IconWrapper}>
+                    <img src="/icons/annoucement.svg" alt="icon" />
+                    </div>
+                   <div className={style.IconWrapper}>
+                    <img src="/icons/calendar.svg" alt="icon" />
+                    </div>
+                   <div className={`${style.IconWrapper}`}>
+                    <img src="/icons/chat-with-alert.svg" alt="icon" />
+                    </div>
+                    <div className={style.hiddenMobile}>
+                    <img className={style.userProfilePic} src="/images/user2.png" alt="icon" />
+                    </div>
+                   </div>
                  </div>
                    {/* Icon Divider  */}
-                   <div className={style.IconGroup}>
+                   <div className={`${style.IconGroup} ${style.hiddenMobile}`}>
                    <div className={style.IconWrapper}>
                     <img src="/icons/annoucement.svg" alt="icon" />
                     </div>
@@ -60,6 +75,11 @@ const Header = () => {
                     <img className={style.userProfilePic} src="/images/user2.png" alt="icon" />
                     </div>
                    </div>
+ 
+                    {/* Mobile design div */}
+                   <div className={`${style.flexMobile} ${style.hidden}`}>
+                    <img className={style.userProfilePic} src="/images/user2.png" alt="icon" />
+                    </div>
                    
             </div>
         </header>

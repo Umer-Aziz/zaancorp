@@ -81,3 +81,20 @@
 .companyItem{
     padding:16px 15px 0 15px;
 }
+
+/* mobile responsive  */
+
+@media screen and (max-width:767px){
+    .CloseSidebarContainer{
+      width: 60px;
+    }
+    .logoContainer{
+        padding: 0 15px 0 15px;
+    }
+    .menuContainer{
+        padding: 15px 0 15px 0;
+    }
+    .companyItem{
+        padding: 0;
+    }
+}
