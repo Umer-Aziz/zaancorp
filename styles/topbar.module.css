@@ -1,0 +1,131 @@
+.topbarContainer{
+    height: 68px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-border);
+    padding: 0 30px;
+}
+.topbarDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.leftContent{
+    display: flex;
+}
+.title{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+}
+.leftIcons{
+    margin-left: 24px;
+    display: flex;
+}
+.leftIconWrapper:hover{
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.IconsContainer{
+    display: flex;
+    column-gap: 4px;
+}
+.leftDivider{
+    width: 1px;
+    height: 30px;
+    background-color: var(--main-color);
+    margin: 0 20px;
+    opacity: 0.2;
+}
+.userPorfilePic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.IconsItem{
+    position: relative;
+    cursor: pointer;
+}
+.msgCounter{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 11px;
+    color: var(--white);
+    background-color: var(--blue);
+    display: grid;
+    place-content: center;
+}
+.IconsContainerRight{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.rightIconWrapper{
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-border);
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+.rightIconWrapper:hover{
+    background-color: var(--gray-border);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.ItemText{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/* mobile responsive  */
+
+@media only screen and (max-width: 1023px){
+    .topbarContainer{
+        padding: 0 12px;
+        width: 100%;
+    }
+    
+    .leftIcons{
+        margin:0 12px;
+    }
+    .leftDivider{
+        margin: 0 8px;
+    }
+    .leftIconWrapper{
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+    }
+    .userPorfilePic{
+        width: 28px;
+        height: 28px;
+    }
+    .title{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .topbarContainer{
+        width: 82vw;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width: 819px) and (min-width: 767px) {
+    .topbarContainer{
+        width: 90vw;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}

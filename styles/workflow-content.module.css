@@ -1,0 +1,12 @@
+.mainContentContainer{
+    padding: 24px 30px;
+}
+.cardWrapper{
+    background-color: var(--bg-gray-card);
+    border-radius: 8px;
+}
+.Cardheader{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 8px;
+}

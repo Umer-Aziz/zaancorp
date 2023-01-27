@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
+import Workflow from '@/components/Workflow'
 import Head from 'next/head'
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
        </div>
         <div className='main-content'>
           <Header/>
+          <Workflow/>
         </div>
         </div>
       </main>

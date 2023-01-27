@@ -77,7 +77,7 @@ const Header = () => {
                    </div>
  
                     {/* Mobile design div */}
-                   <div className={`${style.flexMobile} ${style.hidden}`}>
+                   <div className={`${style.flexMobile} ${style.hidden} ${style.mobileUserIcon}`}>
                     <img className={style.userProfilePic} src="/images/user2.png" alt="icon" />
                     </div>
                    

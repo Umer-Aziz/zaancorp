@@ -1,6 +1,5 @@
 .sidebarContainer {
     width: 270px;
-    border-right: 1px solid var(--gray-border);
     transition: all 0.5s ease-in-out;
 }
 
@@ -84,7 +83,7 @@
 
 /* mobile responsive  */
 
-@media screen and (max-width:767px){
+@media screen and (max-width:1024px){
     .CloseSidebarContainer{
       width: 60px;
     }

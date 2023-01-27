@@ -7,6 +7,7 @@
   --bg-gray-sidebar:#F6F6FF;
   --alert-yellow:#FAAD14;
   --alert-purple:#B0A1DF;
+  --bg-gray-card:#EFF2F5;
 }
 * {
   box-sizing: border-box;
@@ -49,6 +50,8 @@ li {
 }  
 .main-content{
   width: 100%;
+  min-height: 100vh;
+  border-left: 1px solid var(--gray-border);
 }
 
 /* userNotification alerts  */
@@ -59,5 +62,3 @@ li {
 .alert-purple{
   background-color: var(--alert-purple);
 }
-
-
