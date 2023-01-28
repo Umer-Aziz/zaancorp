@@ -3,8 +3,12 @@
   --blue:#0E8CFF;
   --pink: #FF3477;
   --yellow: #FF9F1A;
+  --purple: #6248FF;
+  --purple-light: #70A0FF;
   --pink-light: #FFDEFC;
+  --pink-dark-light: #FFA5F7;
   --yellow-light: #FFEEDE;
+  --light-orange: #FFC690;
   --main-color: #070F21;
   --bg-circle-lightblue: #27E1BF;
   --gray-border:#EBECED;
@@ -73,4 +77,16 @@ li {
 }
 .yellowDot{
   background-color: var(--yellow);
+}
+.lightOrange{
+  background-color: var(--light-orange);
+}
+.pinkDarkLight {
+  background-color: var(--pink-dark-light);
+}
+.BgPurple {
+  background-color: var(--purple);
+}
+.BgPurpleLight {
+  background-color: var(--purple-light);
 }

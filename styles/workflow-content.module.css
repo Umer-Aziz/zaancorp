@@ -1,5 +1,6 @@
 .mainContentContainer{
     padding: 24px 30px;
+    background-color: #F9FBFE;
 }
 .Workflowcard{
     padding: 0 8px 8px 8px;
@@ -9,7 +10,28 @@
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+    max-height: 778px;
+    overflow-y: scroll;
 }
+/* custom scrollbar width */
+.Workflowcard::-webkit-scrollbar {
+    width: 4px; 
+  }
+  
+  /* Track */
+ .Workflowcard::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  .Workflowcard::-webkit-scrollbar-thumb {
+  background: #cdcfd3;
+  background-clip: padding-box;
+  border-radius: 34px;
+  border-top: 10px solid var(--white);
+ 
+  }
+  
 .Cardheader{
     display: grid;
     grid-template-columns: repeat(5,1fr);

@@ -21,8 +21,8 @@ const MainContent = () => {
                  {/* CARD 2  */}
                 <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="filecheck" cardTitle="Design a website" 
                 cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconChecklist2="checklist2" ChecklistCounter="8/9"
-                    CreatedTime="Created 3 days ago" userProfilePic="user2.png"
-                />
+                    CreatedTime="Created 3 days ago" userProfilePic="user2.png"/>
+
                 </div>
 
             </div>
@@ -30,11 +30,110 @@ const MainContent = () => {
             {/* TODO CARDS  CONTAINER */}
             <div className={style.cardWrapper}>
                 <Cardheader title="To Do" counter="5"/>
+                <div className={style.Workflowcard}>
+
+                {/* CARD 1  */}
+                <Workflowcard dotColor="BgPurple" cardLabel="DW4RTeam" cardHeadIcon="userlead" cardTitle="Design a website" 
+                cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" 
+                userProfilePic="user2.png" cardLineBlock={true}/>
+                
+                {/* CARD 2  */}
+                <Workflowcard dotColor="BgPurpleLight" cardLabel="Asteler.io" cardTitle="Design a website" 
+                cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" 
+                userProfilePic="user2.png" cardLineBlock={true}/>
+
+                {/* CARD 3  */}
+                <Workflowcard dotColor="pinkDot" cardLabel="ContactRm" cardTitle="Design a website" 
+                cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" 
+                userProfilePic="user2.png" cardLineBlock={true}/>
+
+                {/* CARD 4  */}
+                <Workflowcard dotColor="pinkDot" cardLabel="ContactRm" cardHeadIcon="userlead" cardTitle="Design a website" 
+                cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" 
+                userProfilePic="user2.png" cardLineBlock={true}/>
+
+                {/* CARD 5  */}
+                <Workflowcard dotColor="pinkDot" cardLabel="ContactRm" cardHeadIcon="userlead" cardTitle="Design a website" 
+                cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" 
+                userProfilePic="user2.png" cardLineBlock={true}/>
+
+
+         </div>
             </div>
 
             {/* IN PROCESS CARDS CONTAINER */}
             <div className={style.cardWrapper}>
                 <Cardheader title="In Process" counter="35"/>
+                <div className={style.Workflowcard}>
+
+                 {/* CARD 1  */}
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="filecheck" cardTitle="Design a website" 
+                IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" userProfilePic="user2.png"/>
+                
+                {/* CARD 2  */}
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="filecheck" cardTitle="Design a website" 
+                IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" userProfilePic="user2.png"/>
+                
+                {/* CARD 3  */}
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="filecheck" cardTitle="Design a website" 
+                IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" userProfilePic="user2.png"/>
+                
+                {/* CARD 4  */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="filecheck" cardTitle="Design a website" 
+                IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" userProfilePic="user2.png"/>
+
+                {/* CARD 5  */}    
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="filecheck" cardTitle="Design a website" 
+                IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" userProfilePic="user2.png"/>
+
+                {/* CARD 6  */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="filecheck" cardTitle="Design a website" 
+                 IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" userProfilePic="user2.png"/>
+
+                {/* CARD 7  to toogle between block on card set cardLineBlock to true */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="userlead" cardTitle="Design a website" 
+                 IconMessage="message" IconChecklist2="checklist2" IconLink="link" MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" 
+                CreatedTime="Created 3 days ago" userProfilePic="user2.png" cardLineBlock={true}/>
+                    
+                {/* CARD 8  to toogle between block on card set cardLineBlock to true */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="userlead" cardTitle="Design a website" 
+                 IconMessage="message" IconChecklist2="checklist2" IconLink="link" MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" 
+                CreatedTime="Created 3 days ago" userProfilePic="user2.png" cardLineBlock={true}/>
+                    
+                {/* CARD 9  to toogle between block on card set cardLineBlock to true */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="userlead" cardTitle="Design a website" 
+                 IconMessage="message" IconChecklist2="checklist2" IconLink="link" MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" 
+                CreatedTime="Created 3 days ago" userProfilePic="user2.png" cardLineBlock={true}/>
+                    
+                {/* CARD 10  to toogle between block on card set cardLineBlock to true */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="userlead" cardTitle="Design a website" 
+                 IconMessage="message" IconChecklist2="checklist2" IconLink="link" MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" 
+                CreatedTime="Created 3 days ago" userProfilePic="user2.png" cardLineBlock={true}/>
+                    
+                {/* CARD 11  to toogle between block on card set cardLineBlock to true */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="userlead" cardTitle="Design a website" 
+                 IconMessage="message" IconChecklist2="checklist2" IconLink="link" MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" 
+                CreatedTime="Created 3 days ago" userProfilePic="user2.png" cardLineBlock={true}/>
+                    
+                {/* CARD 12  to toogle between block on card set cardLineBlock to true */}   
+                <Workflowcard dotColor="yellowDot" cardLabel="AgentBook" cardHeadIcon="userlead" cardTitle="Design a website" 
+                 IconMessage="message" IconChecklist2="checklist2" IconLink="link" MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" 
+                CreatedTime="Created 3 days ago" userProfilePic="user2.png" cardLineBlock={true}/>
+                    
+                </div>
+
+                
             </div>
 
             {/* IN REVIEW CARDS CONTAINER */}

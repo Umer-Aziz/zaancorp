@@ -1,7 +1,8 @@
 import React from 'react'
 import style from "@/styles/workflow/workflowcard.module.css"
 const Workflowcard = ({ dotColor , cardLabel , cardHeadIcon , cardTitle , cardTagTitle1 , cardTagTitle2 ,
-     IconMessage , IconChecklist2 , IconLink , MessageCounter , ChecklistCounter , LinkCounter , CreatedTime , userProfilePic }) => {
+     IconMessage , IconChecklist2 , IconLink , MessageCounter , ChecklistCounter ,
+      LinkCounter , CreatedTime , userProfilePic , cardLineBlock }) => {
   return (
     <>
             <div className={style.cardWrapper}>
@@ -11,17 +12,27 @@ const Workflowcard = ({ dotColor , cardLabel , cardHeadIcon , cardTitle , cardTa
                     <div className={`${style.cardDot} ${dotColor}`}></div>
                     <span className={style.cardLabel}>{cardLabel}</span>
                 </div>
-                <div>
+                {cardHeadIcon != undefined && <div>
                     <img className={style.cardHeadIcon} src={`/icons/${cardHeadIcon}.svg`} alt="icon" />
-                </div>
+                </div>}
                 </div>
                 {/* card body  */}
                 <div style={style.cardBodyWrapper}>
                     <p className={style.cardTitle}>{cardTitle}</p>
-                    <div className={style.cardTagsWrapper}>
+
+                    {/* card tags block  */}
+                    
+                   { cardTagTitle1 != undefined && <div className={style.cardTagsWrapper}>
                         <span className={`${style.cardTagTitle} ${style.cardBgYellow}`}>{cardTagTitle1}</span>
                         <span className={`${style.cardTagTitle} ${style.cardBgPink}`}>{cardTagTitle2}</span>
                     </div>
+                   }
+                   {/*  colors line block   */}
+                    { cardLineBlock != undefined && <div className={style.cardTagsWrapper}>
+                        <div className={`${style.LineBlock} lightOrange`}></div>
+                        <div className={`${style.LineBlock} pinkDarkLight`}></div>
+                        
+                    </div>}
 
                     {/* card Icons  */}
                     <div>
