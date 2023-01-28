@@ -2,6 +2,7 @@
   --white:#fff;
   --blue:#0E8CFF;
   --pink: #FF3477;
+  --yellow: #FF9F1A;
   --pink-light: #FFDEFC;
   --yellow-light: #FFEEDE;
   --main-color: #070F21;
@@ -64,4 +65,12 @@ li {
 }
 .alert-purple{
   background-color: var(--alert-purple);
+}
+
+ /* dot colors  */
+ .pinkDot{
+  background-color: var(--pink);
+}
+.yellowDot{
+  background-color: var(--yellow);
 }
