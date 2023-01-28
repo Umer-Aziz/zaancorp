@@ -3,7 +3,7 @@
     background-color: #F9FBFE;
 }
 .Workflowcard{
-    padding: 0 8px 8px 8px;
+    padding: 0 4px 8px 8px;
     background-color: var(--bg-gray-card);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -15,7 +15,7 @@
 }
 /* custom scrollbar width */
 .Workflowcard::-webkit-scrollbar {
-    width: 4px; 
+    width: 4px;
   }
   
   /* Track */
@@ -36,4 +36,43 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     column-gap: 8px;
+    row-gap: 24px;
+
+    /* display: none; */
 }
+
+@media only screen and (max-width:1279px){
+    .mainContentContainer{
+        padding: 24px 12px;
+    }
+    .Cardheader{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media only screen and (max-width:1023px){
+    .Cardheader{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width:767px){
+    .Cardheader{
+        width: 90%;
+        overflow-x: scroll;
+        display: flex;
+    }
+}
+@media only screen and (max-width:540px){
+    .mainContentContainer{
+        display: grid;
+        width: 82%;
+        place-content: center;
+    }
+    .Cardheader{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 76vw;
+    }
+}
+
+
+

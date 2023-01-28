@@ -15,7 +15,7 @@ const Sidebar = () => {
 
     useEffect(() => {
       let width = window.innerWidth ;
-      width >= 1024  ? setcloseSidebar(false) : setcloseSidebar(true);
+      width >= 1440  ? setcloseSidebar(false) : setcloseSidebar(true);
     }, [])
     
     

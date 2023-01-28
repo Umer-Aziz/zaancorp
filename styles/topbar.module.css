@@ -105,11 +105,20 @@
         overflow-x: scroll;
         white-space: nowrap;
     }
+
 }
-@media only screen and (max-width: 819px) and (min-width: 767px) {
-    .topbarContainer{
-        width: 90vw;
-        overflow-x: scroll;
-        white-space: nowrap;
+@media only screen and (max-width: 1023px) and (min-width: 767px) {
+    .leftIcons{
+        margin-left: 8px;
+    }
+    .leftDivider{
+        margin: 0 8px;
+    }
+    .IconsItem{
+        width: 28px;
+        height: 28px;
+    }
+    .rightIconWrapper{
+        padding: 3px;
     }
 }
