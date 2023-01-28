@@ -1,0 +1,15 @@
+.SideIconsContainer{
+    position: fixed;
+    right: 0;
+    top: 476px;
+    display: grid;
+    gap: 8px;
+}
+.SideIcon {
+    width: 32px;
+    height: 32px;
+}
+.SideIcon:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
