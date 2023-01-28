@@ -1,6 +1,7 @@
 import React from 'react'
 import Cardheader from './Cardheader'
 import style from "@/styles/workflow-content.module.css"
+import Workflowcard from './Workflowcard'
 const MainContent = () => {
   return (
     <>
@@ -8,6 +9,10 @@ const MainContent = () => {
         <div className={style.Cardheader}>
             <div className={style.cardWrapper}>
                 <Cardheader title="Backlog" counter="2"/>
+                <div className={style.Workflowcard}>
+                <Workflowcard/>
+                <Workflowcard/>
+                </div>
             </div>
             <div className={style.cardWrapper}>
                 <Cardheader title="To Do" counter="5"/>

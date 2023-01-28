@@ -3,6 +3,7 @@ import style from "@/styles/workflow/cardheader.module.css"
 const Cardheader = ({title , counter }) => {
   return (
     <>
+       <div className={style.cardHeaderContainer}>
         <div className={style.cardContainer}>
             <div className={style.cardWrapper}>
             <h5 className={style.cardTitle}>{title}</h5>
@@ -13,6 +14,7 @@ const Cardheader = ({title , counter }) => {
             </div>
             </div>
             <img className={style.Icon} src="/icons/menu-dot.svg" alt="menu dot icon" />
+        </div>
         </div>
     </>
   )

@@ -94,22 +94,6 @@
         padding: 0 12px;
         width: 100%;
     }
-    
-    .leftIcons{
-        margin:0 12px;
-    }
-    .leftDivider{
-        margin: 0 8px;
-    }
-    .leftIconWrapper{
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-    }
-    .userPorfilePic{
-        width: 28px;
-        height: 28px;
-    }
     .title{
         font-size: 20px;
     }

@@ -1,8 +1,13 @@
+.cardHeaderContainer{
+    padding: 8px 12px;
+    background-color: var(--bg-gray-card);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 .cardContainer{
     display: flex;
     align-items: center;    
     justify-content: space-between;
-    margin: 8px 12px;
     height: 20px;
 }
 .cardWrapper{

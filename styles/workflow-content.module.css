@@ -1,9 +1,14 @@
 .mainContentContainer{
     padding: 24px 30px;
 }
-.cardWrapper{
+.Workflowcard{
+    padding: 0 8px 8px 8px;
     background-color: var(--bg-gray-card);
-    border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
 }
 .Cardheader{
     display: grid;
