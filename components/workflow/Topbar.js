@@ -3,9 +3,27 @@ import style from "@/styles/topbar.module.css"
 const Topbar = () => {
 
         const [isActive, setIsActive] = useState(false);
+        const [isFilter, setIsFilter] = useState(false);
+        const [isProjectAll, setIsProjectAll] = useState(false);
+        const [isTagsAll, setIsTagsAll] = useState(false);
+        const [isAssignedAll, setIsAssignedAll] = useState(false);
         const [selected, setSelected] = useState("");
-
+        
         const options = ["Order","Created date","Due Date","Sitting count","Move count"];
+
+        
+          // dummy data for filter by Project
+          const colors = ["pinkDot","yellowDot","BgPurple","BgPurpleDarkLight","BgPurpleLight","lightOrange","yellowDot","BgPurple"];
+          const values = ["ContractRm","AgentBook","W4RTeam","LeadBank","Asteler.io","TimeTravel","AgentBook","W4RTeam"];
+
+          // dummy data for filter by tags 
+          const tagValue =["api.contactrm.com","api.contactrm","Restrictive APIs","api.agentbook.com","api.leadbank.com","api.w4rteam"]
+          const tagColors=["BgYellowLight","BgPinkLight","BgGreenLight","BgGrayDark","BgPinkLight","BgGreenLight"];
+
+          //dummy data for Filter by assigned To
+          const names = ["Savannah Nguyen","Wade Warren","Wade Warren","Jane Cooper","Jack Sparrow","John Charles","James Bond","Savannah Nguyen","Mathew Wade","Michel Jeans"]
+          const AssignToImages= ["user4","user7","user7","user6","user2","user3","user1","user6","user4","user2"]
+
 
   return (
    <>
@@ -72,7 +90,7 @@ const Topbar = () => {
                     <img src="/icons/save.svg" alt="save icon" />
                     <span className={style.ItemText}>Views</span>
                 </li>
-                <li className={style.rightIconWrapper}>
+                <li className={style.rightIconWrapper} onClick={e => {setIsFilter(true)}}>
                     <img src="/icons/filter.svg" alt="filter icon" />
                     <span className={style.ItemText}>Filter</span>
                 </li>
@@ -105,6 +123,191 @@ const Topbar = () => {
                 </ul>
             </div>
           </div>}
+
+          {/* filters dropdown  */}
+          { isFilter && <div className={style.filterCardMenu}>
+                 <form>
+                   
+                   <div className={style.filterHead}>
+                        <div className={style.filterLabelContainer}>
+                        <img width={20} height={20} src="/icons/filter.svg" alt="filter icon" />
+                          <p>Filters</p>
+                        </div>
+                        <img width={20} height={20} onClick={e =>{setIsFilter(false)}} className={style.closeIcon} src="/icons/close-gray.svg" alt="close icon" />
+                    </div>
+
+                    <div className={style.filterByContent}>
+
+                    {/* filter by project */}
+                      <div className={style.filterByProject}>
+                       <h6 className={style.FilterLabel}>Project</h6>
+                       <ul className={style.filterProjectBox}>
+                       <li className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <div className={style.FilterLabelWrapper}>
+                            <p>No Project Assigned</p>
+                            </div>
+                        </li>
+                        { isProjectAll ? <ul className={style.filterProjectBox}>
+                        {values.map && values.map(( value, index )=>{
+                          const color = colors[index]
+                          return(
+                            <li key={index} className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <div className={style.FilterLabelWrapper}>
+                            <div className={`${style.FilterProjectDot} ${color}`}></div>
+                            <p>{value}</p>
+                            </div>
+                          </li>
+                          )
+                        })}
+                        </ul>:
+                        <ul className={style.filterProjectBox}>
+                        {values.map && values.slice(0,4).map(( value, index )=>{
+                          const color = colors[index]
+                          return(
+                            <li key={index} className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <div className={style.FilterLabelWrapper}>
+                            <div className={`${style.FilterProjectDot} ${color}`}></div>
+                            <p>{value}</p>
+                            </div>
+                          </li>
+                          )
+                        })}
+                        </ul>
+                        }
+                        <li>
+                        <span onClick={e => {setIsProjectAll(!isProjectAll)}} className={style.showAllButton}>
+                        {isProjectAll ? "Show less..." : "Show all..."}</span>
+                        </li>
+                        </ul>
+                      </div>
+
+                      {/* filter by Tags  */}
+                      <div className={style.filterByProject}>
+                      <h6 className={style.FilterLabel}>Tags</h6>
+                      <ul className={style.filterProjectBox}> 
+                      <li className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <div className={style.FilterLabelWrapper}>
+                            <p>No Tags Added</p>
+                            </div>
+                        </li>
+
+                      { isTagsAll ? <ul className={style.filterProjectBox}>
+                        {tagValue.map && tagValue.map(( value, index )=>{
+                          const color = tagColors[index]
+                          return(
+                            <li key={index} className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" />
+                            <p className={`${style.filterTagsLabel} ${color}`}>{value}</p>
+                          </li>
+                          )
+                        })}
+                        </ul>:
+                        <ul className={style.filterProjectBox}>
+                        {tagValue.map && tagValue.slice(0,4).map(( value, index )=>{
+                          const color = tagColors[index]
+                          return(
+                            <li key={index} className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" />
+                            <p className={`${style.filterTagsLabel} ${color}`}>{value}</p>
+                          </li>
+                          )
+                        })}
+                        </ul>
+                        }
+
+                        <li>
+                        <span onClick={e => {setIsTagsAll(!isTagsAll)}} className={style.showAllButton}>
+                        {isTagsAll ? "Show less..." : "Show all..."}</span>
+                        </li>
+
+                      </ul>
+                      </div>
+
+                      {/* filter by Card */}
+                      <div className={style.filterByProject}>
+                       <h6 className={style.FilterLabel}>Card</h6>
+                       <div>
+                       <ul className={style.filterProjectBox}>
+                            <li className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <p className={style.FilterLabelWrapper}>Cards I created</p>
+                          </li>
+                            <li className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <p className={style.FilterLabelWrapper}>Cards I assigned to me</p>
+                          </li>
+                            <li className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <p className={style.FilterLabelWrapper}>All cards</p>
+                          </li>
+                        </ul>   
+                        </div>
+                      </div>
+
+                    {/* filter by Assign to */}
+                    <div className={style.filterByProject}>
+                       <h6 className={style.FilterLabel}>Assigned To</h6>
+                       <ul className={style.filterProjectBox}>
+                       
+                       <li  className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <div className={style.FilterLabelWrapper}>
+                            <p>Nobody Assigned</p>
+                            </div>
+                        </li>
+                       
+                        { isAssignedAll ? <ul className={style.filterProjectBox}>
+                        {names.map && names.map(( name, index )=>{
+                          const img = AssignToImages[index]
+                          return(
+                            <li key={index} className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <div className={style.FilterLabelWrapper}>
+                            <img className={`${style.filterAssignProfile}`} src={`/images/${img}.png`}  alt="profile pic"/>
+                            <p>{name}</p>
+                            </div>
+                          </li>
+                          )
+                        })}
+                        </ul>:
+                        <ul className={style.filterProjectBox}>
+                        {names.map && names.slice(0,6).map(( name, index )=>{
+                          const img = AssignToImages[index]
+                          return(
+                            <li key={index} className={style.filterProjectItem}>
+                            <input className={style.filterCardCheckbox} type="checkbox" name="" />
+                            <div className={style.FilterLabelWrapper}>
+                            <img className={`${style.filterAssignProfile}`} src={`/images/${img}.png`}  alt="profile pic"/>
+                            <p>{name}</p>
+                            </div>
+                          </li>
+                          )
+                        })}
+                        </ul>
+                        }
+                        <li>
+                        <span onClick={e => {setIsAssignedAll(!isAssignedAll)}} className={style.showAllButton}>
+                        {isAssignedAll ? "Show less..." : "Show all..."}</span>
+                        </li>
+
+                        </ul>
+                      </div>
+
+                    </div>
+                     
+                     <div className={style.FilterByButtons}>
+                     <button className={`${style.formSubmitBtn} ${style.formPurpleBtn}`}>Save as View</button>
+                     <div className={style.filterByBtnRight}>
+                      <button className={style.formSubmitBtn}>Clear</button>
+                      <button className={`${style.formSubmitBtn} ${style.FormBlueBtn}`}>Apply</button>
+                      </div>
+                     </div>
+                 </form>
+               </div> }
 
         </div>
     </section>
