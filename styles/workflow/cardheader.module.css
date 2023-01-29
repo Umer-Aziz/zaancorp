@@ -101,3 +101,154 @@
         left: 0%;
     }
 }
+
+ /* filter by card menu css  */
+
+ .filterCardMenu{
+    width: 286px;
+    height: 686px;
+    position: absolute;
+    background: var(--white);
+    top: 20px;
+    right: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(7, 15, 33, 0.1);
+    filter: drop-shadow(0px 12px 24px rgba(174, 178, 193, 0.2));
+    z-index: 2;
+
+ }
+
+.filterHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+}
+.filterByContent{
+  padding:15px 16px;
+  display: grid;
+  gap: 16px;
+  height: 576px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+}
+.filterByProject{
+    display: grid;
+    gap: 16px;
+}
+.FilterLabel{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+}
+.filterProjectItem{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.FilterLabelWrapper{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(7, 15, 33, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.filterProjectBox{
+    display: grid;
+    gap:12px;
+}
+.filterCardCheckbox{
+    width: 18px;
+    height: 18px;
+    opacity:  0.4;
+}
+.filterCardCheckbox:checked{
+    opacity: 1;
+}
+.FilterProjectDot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.showAllButton{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--blue);
+    cursor: pointer;
+}
+.showAllButton:hover{
+    opacity: 0.8;
+}
+
+/* filter by tags css  */
+.filterTagsLabel{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 2px 6px;
+    color: rgba(7, 15, 33, 0.8);
+    border-radius: 23px;
+}
+
+.filterAssignProfile{
+    width:24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+.FilterByButtons{
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 4px;
+}
+.formSubmitBtn{
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height:20px;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(7, 15, 33, 0.5);
+}
+.formSubmitBtn:hover{
+    transform: translateY(-2px);
+    transition: all 0.3s ease-out;
+}
+.FormBlueBtn{
+    color: var(--white);
+    border: 1px solid rgba(7, 15, 33, 0.05);
+    background-color: var(--blue);
+}
+
+ /* custom scrollbar width */
+.filterByContent::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+ .filterByContent::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  .filterByContent::-webkit-scrollbar-thumb {
+  background: #cdcfd3;
+  background-clip: padding-box;
+  border-radius: 34px;
+  border-top: 10px solid var(--white);
+  }

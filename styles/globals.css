@@ -1,4 +1,5 @@
 :root {
+  --main-color: #070F21;
   --white:#fff;
   --blue:#0E8CFF;
   --pink: #FF3477;
@@ -10,8 +11,9 @@
   --pink-dark-light: #FFA5F7;
   --yellow-light: #FFEEDE;
   --light-orange: #FFC690;
-  --main-color: #070F21;
   --bg-circle-lightblue: #27E1BF;
+  --green-light: #E4F5FF;
+  --gray-dark: #DDE6FE;
   --gray-border:#EBECED;
   --bg-gray-sidebar:#F6F6FF;
   --bg-dropdown-item:#F5F5F6;
@@ -94,4 +96,16 @@ li {
 }
 .BgPurpleDarkLight {
   background-color: var(--purple-dark-light);
+}
+.BgYellowLight{
+  background-color: var(--yellow-light);
+}
+.BgPinkLight{
+  background-color: var(--pink-light);
+}
+.BgGreenLight{
+  background-color: var(--green-light);
+}
+.BgGrayDark{
+  background-color: var(--gray-dark);
 }
