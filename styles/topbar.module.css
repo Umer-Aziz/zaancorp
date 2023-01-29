@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: relative;
+
 }
 .leftContent{
     display: flex;
@@ -89,6 +91,84 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 20px;
+}
+
+/* sort by dropdown css  */
+
+.sortbyDropdown{
+ position: absolute;
+ background-color: var(--white);
+ top: 44px;
+ right: 0;
+ width: 240px;
+ height: 268px;
+ z-index: 1;
+ border-radius: 8px;
+ filter: drop-shadow(0px 12px 24px rgba(174, 178, 193, 0.2));
+ border: 1px solid rgba(7, 15, 33, 0.1);
+}
+.sortbyHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+}
+.sortbyLeft{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+.sortbyLeft:hover{
+    transform:translateY(-2px);
+    transition: all 0.3s ease-out;
+}
+.sortHeadIcon{
+    opacity: 0.6;
+}
+.sortHeadIconClose{
+    cursor: pointer;
+}
+.sortHeadIconClose:hover{
+    transform: rotate(45deg);
+    transition: all 0.5s ease-out;
+}
+.sortbyTitle{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+}
+.sortbyContent{
+    margin-top: 9px;
+    padding-bottom: 12px;
+}
+.sortbyList{
+    display: grid;
+    row-gap: 4px;
+}
+.sortbyItem{
+    padding: 8px 15px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.sortbyItem:hover{
+    background-color: var(--bg-dropdown-item);
+    transition: all 0.3s ease-out;
+}
+.sortbyActive {
+    background-color: var(--bg-dropdown-item);
+}
+
+@media only screen and (max-width:767px) {
+    .sortbyDropdown{
+        position: fixed;
+        right: 12px;
+        transform: translateY(4px);
+    }
 }
 
 /* mobile responsive  */

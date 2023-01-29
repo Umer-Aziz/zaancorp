@@ -1,6 +1,12 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import style from "@/styles/topbar.module.css"
 const Topbar = () => {
+
+        const [isActive, setIsActive] = useState(false);
+        const [selected, setSelected] = useState("");
+
+        const options = ["Order","Created date","Due Date","Sitting count","Move count"];
+
   return (
    <>
     <section className={style.topbarContainer}>
@@ -70,12 +76,36 @@ const Topbar = () => {
                     <img src="/icons/filter.svg" alt="filter icon" />
                     <span className={style.ItemText}>Filter</span>
                 </li>
-                <li className={style.rightIconWrapper}>
+                <li className={style.rightIconWrapper} onClick={e => {setIsActive(true)}}>
                     <img src="/icons/sort-by.svg" alt="sort-by icon" />
                     <span className={style.ItemText}>Sort By</span>
                 </li>
             </ul>
           </div>
+
+          {/* Sort by dropdown  */}
+          {isActive && <div className={style.sortbyDropdown}>
+            <div className={style.sortbyHead}>
+                <div className={style.sortbyLeft}>
+                    <img className={style.sortHeadIcon} src="/icons/sort-by.svg" alt="icon" />
+                    <span className={style.sortbyTitle}>Sort By</span>
+                </div>
+                <div onClick={e => {setIsActive(false)}}>
+                    <img className={style.sortHeadIconClose} src="/icons/close-gray.svg" alt="close icon" />
+                </div>
+            </div>
+            <div className={style.sortbyContent}>
+                <ul className={style.sortbyList}>
+                {options.map && options.map((option , index)=>{
+                    return(
+                    <li key={index} className={`${style.sortbyItem} ${selected == option && style.sortbyActive }`} onClick={(e) => { setSelected(option) , setIsActive(false)}}>{option}</li>
+                    )
+                })}
+                    
+                </ul>
+            </div>
+          </div>}
+
         </div>
     </section>
    </>

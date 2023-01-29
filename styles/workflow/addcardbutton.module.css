@@ -124,12 +124,12 @@
     width: 100%;
 }
 .dropdownItem:hover{
-    background: #F5F5F6;
+    background: var(--bg-dropdown-item);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 .dropdownAcive {
-    background: #F5F5F6;
+    background: var(--bg-dropdown-item);
 }
 .dropdownItemDot{
     width: 10px;

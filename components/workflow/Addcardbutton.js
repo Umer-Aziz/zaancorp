@@ -42,7 +42,8 @@ const Addcardbutton = () => {
                       values.map((value,index)=>{
                         const color = colors[index]
                         return (
-                          <div key={index} className={`${style.dropdownItem} ${selected == value && style.dropdownAcive }`} onClick={(e) => { setSelected(value) , setIsActive(false)}}>
+                          <div key={index} className={`${style.dropdownItem} ${selected == value && style.dropdownAcive }`}
+                           onClick={(e) => { setSelected(value) , setIsActive(false)}}>
                           <div className={`${style.dropdownItemDot} ${color}`}></div>
                           <span className={style.dropdownItemText}>{value}</span>
                       </div>
