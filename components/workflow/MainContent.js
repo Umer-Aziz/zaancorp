@@ -7,7 +7,9 @@ import InprocessCards from './InprocessCards'
 import InreviewCards from './InreviewCards'
 import CompletedCards from './CompletedCards'
 import Addcardbutton from './Addcardbutton'
+
 const MainContent = () => {
+
   return (
     <>
     <section className={style.mainContentContainer}>
@@ -39,7 +41,7 @@ const MainContent = () => {
             {/* IN PROCESS CARDS CONTAINER */}
             <div className={style.cardWrapper}>
 
-                <Cardheader title="In Process" counter="35"/>
+                <Cardheader title="In Process" counter="35" />
                 <div className={style.Workflowcard}>
                 <div className={style.workflowWrapper}>
                   <InprocessCards/>

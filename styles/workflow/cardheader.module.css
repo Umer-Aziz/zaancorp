@@ -3,6 +3,7 @@
     background-color: var(--bg-gray-card);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    position: relative;
 }
 .cardContainer{
     display: flex;
@@ -24,10 +25,79 @@
     font-size: 12px;
     margin: 0px 8px 0 4px;
 }
-.Icon{
-    cursor:pointer;
+.Icon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all 0.2s ease-out;
 }
 .cardIcons{
     display: flex;
     column-gap: 6px;
+}
+
+/* list action menu dropdown  */
+
+.listActionMenu{
+    width: 273px;
+    height: 157px;
+    background-color: var(--white);
+    position: absolute;
+    left: -14%;
+    top:80%;
+    z-index: 1;
+    border-radius: 8px;
+    filter: drop-shadow(0px 12px 24px rgba(174, 178, 193, 0.2));
+    border: 1px solid rgba(7, 15, 33, 0.1);
+
+}
+.listHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+}
+.closeIcon:hover{
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.listActionWrapper{
+    margin-top: 8px;
+    display: grid;
+    gap: 4px;
+}
+.listActionItem{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(7, 15, 33, 0.7);
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.listActionItem:hover{
+    background-color: var(--bg-dropdown-item);
+    transition: all 0.3s ease-out;
+}
+.listItemActive{
+    background-color: var(--bg-dropdown-item);
+}
+
+@media screen and (max-width:1200px) {
+    .listActionMenu{
+        left: -10%;
+    }
+}
+@media screen and (max-width:819px) {
+    .listActionMenu{
+        left: -14%;
+    }
+}
+@media screen and (max-width:540px) {
+    .listActionMenu{
+        left: 0%;
+    }
 }
