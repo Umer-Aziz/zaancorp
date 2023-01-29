@@ -104,6 +104,10 @@
 
  /* filter by card menu css  */
 
+ .sortByWrappar{
+    position: relative;
+ }
+
  .filterCardMenu{
     width: 286px;
     height: 686px;
@@ -233,6 +237,24 @@
     color: var(--white);
     border: 1px solid rgba(7, 15, 33, 0.05);
     background-color: var(--blue);
+}
+
+@media screen  and (max-width:767px){
+    .filterCardMenu{
+        width: 240px;
+        position: fixed;
+        top: 30vh;
+        left: 0;
+        margin: auto;
+     }
+}
+@media screen  and (max-width:1023px){
+    .filterCardMenu{
+        position: fixed;
+        top: 15vh;
+        left: 0;
+        margin: auto;
+     }
 }
 
  /* custom scrollbar width */

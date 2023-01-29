@@ -33,7 +33,7 @@ const Cardheader = ({title , counter }) => {
             <span className={style.cardCounter}>({counter})</span>
             <div className={style.cardIcons}>
             <img className={style.Icon} src="/icons/filter-gray.svg" alt="filter" />
-            <div style={{position:"relative"}}>
+            <div className={style.sortByWrappar}>
             <img onClick={e =>{setIsFilter(true)}} className={style.Icon} src="/icons/sortby-gray.svg" alt="sort by icon" />
              {/* filter by card Menu */}
              { isFilter && <div className={style.filterCardMenu}>
