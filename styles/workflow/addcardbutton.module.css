@@ -9,6 +9,7 @@
     outline: none;
     border: 1px solid var(--main-color);
     border: 1px solid rgba(7, 15, 33, 0.1);
+    cursor: pointer;
 }
 .addCardWrapper{
     position: relative;
@@ -78,18 +79,68 @@
     align-items: center;
     gap: 8px;
 }
-.selectorContainer{
+
+.DropdownWrapper{
     width: 100%;
+    position: relative;
+}
+.selectorDropdown{
     border: 1px solid rgba(7, 15, 33, 0.1);
     border-radius: 6px;
     background: var(--white);
-    padding: 7px 8px;
 }
-.selectorGroup{
+.selectorDropdown:hover{
+    border: 1px solid rgba(7, 15, 33, 0.3);
+    transition: all 0.3s ease-out;
+}
+.dropdownBtn{
     width: 100%;
-    outline: none;
-    border: none;
-    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    opacity: 0.4;
+    padding: 7px 8px;
+    cursor: pointer;
+}
+.dropdownContent{
+    padding: 8px 0 9px 0;
+    width: 166px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid rgba(7, 15, 33, 0.1);
+}
+.dropdownItem{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px;
+    width: 100%;
+}
+.dropdownItem:hover{
+    background: #F5F5F6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.dropdownAcive {
+    background: #F5F5F6;
+}
+.dropdownItemDot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dropdownItemText{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    opacity: 0.7;
 }
 .addBtn{
     outline: none;

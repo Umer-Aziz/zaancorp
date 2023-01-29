@@ -5,6 +5,7 @@
   --yellow: #FF9F1A;
   --purple: #6248FF;
   --purple-light: #70A0FF;
+  --purple-dark-light: #8F76FF;
   --pink-light: #FFDEFC;
   --pink-dark-light: #FFA5F7;
   --yellow-light: #FFEEDE;
@@ -89,4 +90,7 @@ li {
 }
 .BgPurpleLight {
   background-color: var(--purple-light);
+}
+.BgPurpleDarkLight {
+  background-color: var(--purple-dark-light);
 }

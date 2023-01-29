@@ -32,6 +32,7 @@ const MainContent = () => {
                 <div className={style.workflowWrapper}>
                 <Todocards/>
                 </div>
+                <Addcardbutton/>
          </div>
             </div>
 
@@ -43,8 +44,8 @@ const MainContent = () => {
                 <div className={style.workflowWrapper}>
                   <InprocessCards/>
                   </div>
+                  <Addcardbutton/>
                 </div>
-
             </div>
 
             {/* IN REVIEW CARDS CONTAINER */}
@@ -54,6 +55,7 @@ const MainContent = () => {
                 <div className={style.workflowWrapper}>
                 <InreviewCards/>
                 </div>
+                <Addcardbutton/>
                 </div>
             </div>
 
@@ -64,6 +66,7 @@ const MainContent = () => {
                 <div className={style.workflowWrapper}>
                     <CompletedCards/>
                 </div>
+                <Addcardbutton/>
                 </div>
             </div>
         </div>

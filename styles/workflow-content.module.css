@@ -6,27 +6,27 @@
     background-color: var(--bg-gray-card);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    max-height: 778px;
-    overflow-y: scroll;
 }
 .workflowWrapper{
     padding: 0 4px 8px 8px;
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+    max-height: 778px;
+    overflow-y: scroll;
 }
 /* custom scrollbar width */
-.Workflowcard::-webkit-scrollbar {
+.workflowWrapper::-webkit-scrollbar {
     width: 4px;
   }
   
   /* Track */
- .Workflowcard::-webkit-scrollbar-track {
+ .workflowWrapper::-webkit-scrollbar-track {
     background: transparent;
   }
   
   /* Handle */
-  .Workflowcard::-webkit-scrollbar-thumb {
+  .workflowWrapper::-webkit-scrollbar-thumb {
   background: #cdcfd3;
   background-clip: padding-box;
   border-radius: 34px;
