@@ -12,16 +12,20 @@ const Topbar = () => {
             <div className={style.leftIcons}>
                 <ul className={style.IconsContainer}>
                     <li className={style.leftIconWrapper}>
-                        <img src="/icons/workflow-active.svg" alt="icon" />
+                        <img className={style.Icon} src="/images/workflow-active.png" alt="icon" />
+                        {/* <img className={style.Icon} src="/images/workflow.png" alt="icon" /> */}
                     </li>
                     <li className={style.leftIconWrapper}>
-                        <img src="/icons/pencil-gray-bg.svg" alt="icon" />
+                        <img className={style.Icon} src="/images/design.png" alt="icon" />
+                        {/* <img className={style.Icon} src="/images/design-active.png" alt="icon" /> */}
                     </li>
                     <li className={style.leftIconWrapper}>
-                        <img src="/icons/code-gray-bg.svg" alt="icon" />
+                        <img className={style.Icon} src="/images/code.png" alt="icon" />
+                        {/* <img className={style.Icon} src="/images/code-active.png" alt="icon" /> */}
                     </li>
                     <li className={style.leftIconWrapper}>
-                        <img src="/icons/idea-gray-bg.svg" alt="icon" />
+                        <img className={style.Icon} src="/images/announcement.png" alt="icon" />
+                        {/* <img className={style.Icon} src="/images/announcement-active.png" alt="icon" /> */}
                     </li>
                 </ul>
 
