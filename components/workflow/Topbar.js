@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import style from "@/styles/topbar.module.css"
+import style from "@/styles/workflow/topbar.module.css"
 import Workflowcard from './Workflowcard';
 const Topbar = () => {
 
@@ -95,7 +95,7 @@ const Topbar = () => {
                 </div>}
 
                {isPinned && <div>
-                <img width={40} height={40} src="/images/pinned-active.png" alt="pinned icon" />
+                <img width={36} height={36} src="/images/pinned-active.png" alt="pinned icon" />
                 </div>}
 
                     {/* pinned popup card  */}
