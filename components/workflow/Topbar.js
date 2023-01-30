@@ -11,6 +11,8 @@ const Topbar = () => {
         const [isView, setIsView] = useState(false);
         const [isDelete, setIsDelete] = useState(false);
         const [isPinned, setIsPinned] = useState(false);
+        const [isArchive, setIsArchive] = useState(false);
+        const [isSnooze,setIsSnooze] = useState(false);
         const [selected, setSelected] = useState("");
         
         const options = ["Order","Created date","Due Date","Sitting count","Move count"];
@@ -95,7 +97,7 @@ const Topbar = () => {
                 </div>}
 
                {isPinned && <div>
-                <img width={36} height={36} src="/images/pinned-active.png" alt="pinned icon" />
+                <img width={36} height={36} className={style.pinnedActiveIcon} src="/images/pinned-active.png" alt="pinned icon" />
                 </div>}
 
                     {/* pinned popup card  */}
@@ -112,7 +114,7 @@ const Topbar = () => {
                              <input className={style.SearchInput} type="text" placeholder='Search'  />
                          </div>
                          <div className={style.PinnedCardContent}>
-                               {/* CARD 1  */}
+                          
                         {
                             PinnedData.map && PinnedData.map((data,index)=>{
                                 return(
@@ -127,8 +129,75 @@ const Topbar = () => {
                          </div>
                     </div>}
                 </li>
-                <li className={style.rightIconWrapper}>
+                <li className={style.FilterViewWrapper}>
+                 <div onClick={e =>{setIsArchive(true)}} className={style.rightIconWrapper}>
                     <img src="/icons/double-file.svg" alt="file icon" />
+                  </div>
+
+                  { isArchive && <div className={style.archiveCardContainer}>
+                  <div className={style.PinnedCardHead}>
+                            <div className={style.PinnedHeadLeft}>
+                                 <div className={style.archiveBtnWrapper}>
+                                  <button onClick={e => {setIsSnooze(false)}} className={`${style.archiveCardBtn} ${style.archiveBtn} ${!isSnooze && "activeArchive" }`}>
+                                 {!isSnooze ? <img width={16} height={16} src="/images/archive-active.png" alt="icon"/>:
+                                  <img width={16} height={16} style={{opacity:0.6}} src="/images/archive.png" alt="icon" />}
+                                    <span>Archive</span>
+                                  </button>
+                                  <button onClick={e => {setIsSnooze(true)}} className={`${style.archiveCardBtn} ${style.snoozeBtn}  ${isSnooze && "activeArchive" }`}>
+                                  { isSnooze ? <img width={16} height={16} src="/images/snooze-active.png" alt="icon" />:
+                                  <img width={16} height={16} src="/icons/snooze.svg" alt="icon" />}
+                                    <span>Snooze</span>
+                                  </button>
+                                 </div>
+                            </div>
+                            <img onClick={e =>{setIsArchive(false)}} className={style.closeIcon} src="/icons/close-gray.svg" alt="close icon" />
+                         </div>
+
+                         <div className={style.PinnedSearchBar}>
+                             <img className={style.SearchIcon} src="/icons/search.svg" alt="search"/>
+                             <input className={style.SearchInput} type="text" placeholder='Search'  />
+                         </div>
+
+                         { !isSnooze ? <div className={style.PinnedCardContent}>
+                          {
+                              PinnedData.map && PinnedData.map((index)=>{
+                                  return(
+                                  <div className={style.archiveCardWrapper}>
+                                  <Workflowcard key={index} dotColor="pinkDot" cardLabel="ContactRm" cardTitle="Design a website" 
+                                  cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                                  MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" 
+                                  userProfilePic="user2.png" cardLineBlock={true}/>
+                                  <div className={style.cardStatus}>
+                                  <img width={16} height={16} src="/images/user2.png" alt="user icon" />
+                                  <span className={style.cardStatusText}>Archived in <strong className={style.statusLabel}>Completed</strong> 3 days ago</span>
+                                  </div>
+                                  </div>
+                                  )
+                              })
+                          }
+                  
+                           </div>:
+                            <div className={style.PinnedCardContent}>
+                          {
+                              PinnedData.map && PinnedData.map((index)=>{
+                                  return(
+                                  <div className={style.archiveCardWrapper}>
+                                  <Workflowcard key={index} dotColor="pinkDot" cardLabel="ContactRm" cardTitle="Design a website" 
+                                  cardTagTitle1="api.contactrm.com" cardTagTitle2="api.contactrm" IconMessage="message" IconChecklist2="checklist2" IconLink="link" 
+                                  MessageCounter="12" ChecklistCounter="8/9" LinkCounter="2" CreatedTime="Created 3 days ago" 
+                                  userProfilePic="user2.png" cardLineBlock={true}/>
+                                  <div className={style.cardStatus}>
+                                  <img width={16} height={16} src="/images/user2.png" alt="user icon" />
+                                  <span className={style.cardStatusText}>Snoozed until <strong className={style.statusLabel}>Oct 24 at 10:00 PM</strong></span>
+                                  </div>
+                                  </div>
+                                  )
+                              })
+                          }
+                  
+                           </div>}
+                  </div>}
+
                 </li>
                 <li className={style.FilterViewWrapper}>
                 <div className={style.rightIconWrapper} onClick={e => {setIsView(true)}}>

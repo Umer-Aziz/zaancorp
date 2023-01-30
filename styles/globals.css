@@ -112,3 +112,9 @@ li {
 .BgLightBlue{
   background-color: var(--bg-circle-lightblue);
 }
+
+/* snooze button  */
+.activeArchive{
+  background: var(--purple) !important;
+  color: var(--white) !important;
+}

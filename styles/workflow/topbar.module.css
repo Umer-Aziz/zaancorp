@@ -193,6 +193,9 @@
         overflow-x: scroll;
         white-space: nowrap;
     }
+    .IconsContainerRight{
+        margin-left:8px;
+    }
 
 }
 @media only screen and (max-width: 1023px) and (min-width: 767px) {
@@ -202,7 +205,7 @@
     .leftDivider{
         margin: 0 8px;
     }
-    .IconsItem{
+    .IconsItem , .pinnedActiveIcon{
         width: 28px;
         height: 28px;
     }
@@ -623,7 +626,7 @@
     color: rgba(7, 15, 33, 0.4);
 }
 .PinnedCardContent{
-    background-color: var(--bg-gray-sidebar);
+    background-color: var(--bg-gray-card);
     height: 584px;
     overflow-y: scroll;
     padding: 16px 20px;
@@ -637,6 +640,85 @@
         top: 134px;
         right: 10%;
      }
+}
+
+/* Archive card css  */
+.archiveCardContainer{
+    background-color: var(--white);
+    position: absolute;
+    top: 44px;
+    right: 0;
+    width: 297px;
+    height: 680px;
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid rgba(7, 15, 33, 0.1);
+    box-shadow: 0px 12px 24px rgba(174, 178, 193, 0.2);
+    overflow: hidden;
+}
+.archiveBtnWrapper{
+    display: flex;
+    align-items: center;
+}
+.archiveCardBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 8px;
+    gap: 4px;
+    width: 100px;
+    height: 30px;
+    left: 100px;
+    background: #E6E7E9;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(7, 15, 33, 0.8);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.archiveCardBtn:hover{
+    opacity: 0.8;
+    transition: all 0.3s ease-out;
+}
+.snoozeBtn{
+    border-radius: 0px 8px 8px 0px;
+}
+.archiveBtn{
+    border-radius: 8px 0px 0px 8px;
+}
+.archiveCardWrapper{
+    background-color: var(--white);
+    border-radius: 8px;
+}
+.cardStatus{
+    height: 24px;
+    padding: 4px 8px;
+    background-color: #E9E5FF;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.cardStatusText{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: rgba(7, 15, 33, 0.6);
+}
+.statusLabel{
+    color: var(--main-color) ;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+}
+@media only screen and (max-width:767px){
+    .archiveCardContainer{
+       position: fixed;
+       top: 134px;
+       right: 10%;
+    }
 }
 
 /* custom scrollbar width */
