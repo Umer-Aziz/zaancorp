@@ -109,3 +109,6 @@ li {
 .BgGrayDark{
   background-color: var(--gray-dark);
 }
+.BgLightBlue{
+  background-color: var(--bg-circle-lightblue);
+}

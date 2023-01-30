@@ -7,6 +7,7 @@ const Topbar = () => {
         const [isProjectAll, setIsProjectAll] = useState(false);
         const [isTagsAll, setIsTagsAll] = useState(false);
         const [isAssignedAll, setIsAssignedAll] = useState(false);
+        const [isView, setIsView] = useState(false);
         const [selected, setSelected] = useState("");
         
         const options = ["Order","Created date","Due Date","Sitting count","Move count"];
@@ -15,6 +16,10 @@ const Topbar = () => {
           // dummy data for filter by Project
           const colors = ["pinkDot","yellowDot","BgPurple","BgPurpleDarkLight","BgPurpleLight","lightOrange","yellowDot","BgPurple"];
           const values = ["ContractRm","AgentBook","W4RTeam","LeadBank","Asteler.io","TimeTravel","AgentBook","W4RTeam"];
+        
+          // dummy data for filter by views
+          const colorsViews = ["BgPurple","pinkDot","BgLightBlue","yellowDot","BgLightBlue",];
+          const valuesView = ["My first filter","Available for me","Current Tasks","Top Project","Favorites"]
 
           // dummy data for filter by tags 
           const tagValue =["api.contactrm.com","api.contactrm","Restrictive APIs","api.agentbook.com","api.leadbank.com","api.w4rteam"]
@@ -86,9 +91,42 @@ const Topbar = () => {
                 <li className={style.rightIconWrapper}>
                     <img src="/icons/double-file.svg" alt="file icon" />
                 </li>
-                <li className={style.rightIconWrapper}>
+                <li className={style.FilterViewWrapper}>
+                <div className={style.rightIconWrapper} onClick={e => {setIsView(true)}}>
                     <img src="/icons/save.svg" alt="save icon" />
                     <span className={style.ItemText}>Views</span>
+                </div>
+                    {/* // list Action menu  */}
+                { isView && <div className={style.listActionMenu}>
+                <div className={style.listHead}>
+                    <div className={style.viewLabelHead}>
+                    <img width={18} height={18} src="/icons/save.svg" alt="save icon" />
+                        <p>Views</p>
+                    </div>
+                    <img onClick={e => {setIsView(false)}} className={style.closeIcon} src="/icons/close-gray.svg"
+                     alt="close icon" />
+                </div>
+                <div>
+                    <ul className={style.listActionWrapper}>
+                    {
+                        valuesView.map && valuesView.map((option , index)=>{
+                            const color = colorsViews[index]
+                            return(
+                                <li onClick={e => {setSelected(option) , setIsActive(false)}} key={index} 
+                                className={`${style.listActionItem} ${selected == option && style.listItemActive }`}>
+                               <div className={style.listActionLabel}>
+                               <div className={`${style.FilterProjectDot} ${color}`}></div>
+                                <span>{option}</span>
+                               </div>
+                                <img className={`${option != "Current Tasks" && "hidden" }`} src='/images/delete.png'  alt='icon'/>
+                                </li>
+                            )
+                        })
+                    }
+                    </ul>
+                </div>
+            </div>}
+
                 </li>
                 <li className={style.rightIconWrapper} onClick={e => {setIsFilter(true)}}>
                     <img src="/icons/filter.svg" alt="filter icon" />
