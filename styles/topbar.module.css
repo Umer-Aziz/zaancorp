@@ -481,3 +481,100 @@
         right: 10vw;
     }
 }
+
+ /* delete card  */
+.DeleteIcon:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+ .deleteCardContainer{
+    position: fixed;
+    top: 50%;
+    left: 34%;
+    width: 492px;
+    height: 248px;
+    background-color: var(--white);
+    z-index: 10;
+    border: 1px solid rgba(7, 15, 33, 0.1);
+    border-radius: 8px;
+ }
+ .deletecardHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+ }
+.deleteCardContent{
+    height:90px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(7, 15, 33, 0.8);
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+}
+.deleteCardBtns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 88px;
+    gap: 8px;
+    padding: 0 24px;
+}
+.formDeleteBtn {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    width: 88px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(7, 15, 33, 0.8);
+}
+.formDeleteBtn:hover{
+    transform: translateY(-2px);
+    transition: all 0.3s ease-out;
+}
+.DeleteBtn{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+@media only screen and (max-width:1200px) {
+    .deleteCardContainer{
+        left: 26%;
+    }
+    
+}
+@media only screen and (max-width:992px) {
+    .deleteCardContainer{
+        top: 26%;
+        width: 380px;
+    }
+    
+}
+@media only screen and (max-width:767px) {
+    .deleteCardContainer{
+        top: 30%;
+        width: 340px;
+        left: 20%;  
+    }
+    
+}
+@media only screen and (max-width:539px) {
+    .deleteCardContainer{
+        top: 30%;
+        width: 320px;
+        left: 10%;
+    }
+    
+}

@@ -8,6 +8,7 @@ const Topbar = () => {
         const [isTagsAll, setIsTagsAll] = useState(false);
         const [isAssignedAll, setIsAssignedAll] = useState(false);
         const [isView, setIsView] = useState(false);
+        const [isDelete, setIsDelete] = useState(false);
         const [selected, setSelected] = useState("");
         
         const options = ["Order","Created date","Due Date","Sitting count","Move count"];
@@ -118,12 +119,29 @@ const Topbar = () => {
                                <div className={`${style.FilterProjectDot} ${color}`}></div>
                                 <span>{option}</span>
                                </div>
-                                <img className={`${option != "Current Tasks" && "hidden" }`} src='/images/delete.png'  alt='icon'/>
+                                <img onClick={e => {setIsDelete(true)}} className={`${option != "Current Tasks" && "hidden"} ${style.DeleteIcon}`} 
+                                src='/images/delete.png'  alt='icon'/>
                                 </li>
                             )
                         })
                     }
                     </ul>
+                </div>
+            </div>}
+
+            {/* Delete Cards  */}
+            { isDelete && <div className={style.deleteCardContainer}>
+                <div className={style.deletecardHead}>
+                <span>Delete</span>
+                    <img onClick={e => {setIsDelete(false)}} className={style.closeIcon} width={20} height={20} src="/icons/close-gray.svg" alt="icon" />
+                </div>
+                <div className={style.deleteCardContent}>
+                    <p>Are you sure you want to delete this Filter?</p>
+                </div>
+                <div className={style.deleteCardBtns}>
+                    <button className={`${style.formDeleteBtn} ${style.clearBtn}`}>Clear</button>
+                    <button className={`${style.formDeleteBtn} ${style.DeleteBtn}`}>Delete</button>
+                    <button></button>
                 </div>
             </div>}
 
