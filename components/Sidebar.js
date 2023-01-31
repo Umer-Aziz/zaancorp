@@ -25,7 +25,7 @@ const Sidebar = () => {
   return (
     <>
     <div className={`${ closeSidebar ? style.CloseSidebarContainer : style.sidebarContainer  }`}>
-        <aside className={`${style.sideBarWrapper} ${!closeSidebar && style.sidebBarBg}`}>
+        <aside className={`${style.sideBarWrapper} ${closeSidebar && style.sidebBarBg}`}>
             <div className={`${style.logoContainer} ${closeSidebar && style.logoContainerClose}`}>
                 <div className={`${style.logoDiv} ${closeSidebar ? "hidden" : "flex"}`}>
                 <div className={style.logoCircle}></div>
