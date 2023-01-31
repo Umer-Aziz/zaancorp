@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zain Corp</title>
-        <meta name="description" content="Zain corp" />
+        <title>Zaan Corp</title>
+        <meta name="description" content="Zaan corp" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className='container'>
