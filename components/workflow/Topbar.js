@@ -239,7 +239,7 @@ const Topbar = () => {
             </div>}
 
             {/* Delete Cards  */}
-            { isDelete && <div>
+            { isDelete && <div className={style.DeleteCard}>
             <div className={style.deleteCardContainer}>
                 <div className={style.deletecardHead}>
                 <span>Delete</span>

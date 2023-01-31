@@ -226,6 +226,8 @@
     position: relative;
  }
 
+  /* filter card menu */
+
  .filterCardMenu{
     width: 373px;
     height: 947px;
@@ -237,7 +239,6 @@
     border: 1px solid rgba(7, 15, 33, 0.1);
     filter: drop-shadow(0px 12px 24px rgba(174, 178, 193, 0.2));
     z-index: 2;
-
  }
 
 .filterHead{
@@ -333,7 +334,6 @@
     margin-right: 2px;
 }
 .FilterByButtons{
-    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -374,19 +374,39 @@
     transform: translateY(0px);
 }
 
-@media screen  and (max-width:767px){
-    .filterCardMenu{
-        width: 260px;
-        position: fixed;
-        top: 76px;
-        right: 2%;
-     }
-}
 @media screen  and (min-width:767px) and (max-width:1023px){
     .filterCardMenu{
         width: 310px;
      }
 }
+
+@media screen  and (max-width:767px){
+    .filterCardMenu{
+        height: auto;
+        width: 260px;
+        position: fixed;
+        top: 76px;
+        right: 2%;
+
+     }
+     .filterByContent{
+        height: 440px;
+      }
+      .FilterByButtons{
+        flex-wrap: wrap;
+        row-gap: 8px;
+      }
+      .filterByBtnRight{
+        justify-content: space-between;
+        width: 100%;
+      }
+}
+@media screen  and (max-width:539px){
+    .filterByContent{
+        height: 380px;
+      }
+}
+
   
 /* list action menu dropdown  */
 
@@ -481,10 +501,18 @@
     opacity: 0.5;
     z-index: 5;
 }
- .deleteCardContainer{
+.DeleteCard{
     position: fixed;
-    top: 50%;
-    left: 34%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+}
+ .deleteCardContainer{
     width: 492px;
     height: 248px;
     background-color: var(--white);
@@ -543,32 +571,15 @@
     color: var(--white);
 }
 
-@media only screen and (max-width:1200px) {
-    .deleteCardContainer{
-        left: 26%;
-    }
-    
-}
-@media only screen and (max-width:992px) {
-    .deleteCardContainer{
-        top: 26%;
-        width: 380px;
-    }
-    
-}
 @media only screen and (max-width:767px) {
     .deleteCardContainer{
-        top: 30%;
-        width: 340px;
-        left: 20%;  
+        width: 340px; 
     }
     
 }
 @media only screen and (max-width:539px) {
     .deleteCardContainer{
-        top: 30%;
         width: 320px;
-        left: 10%;
     }
     
 }
@@ -635,11 +646,22 @@
 }
 
 @media only screen and (max-width:767px){
-     .PinnedCardContainer{
+     .PinnedCardContainer {
         position: fixed;
         top: 134px;
         right: 10%;
+        height: auto;
      }
+     .PinnedCardContent{
+        height: 440px;
+     }
+     
+}
+
+@media screen  and (max-width:539px){
+    .PinnedCardContent{
+        height: 380px;
+      }
 }
 
 /* Archive card css  */
@@ -718,6 +740,7 @@
        position: fixed;
        top: 134px;
        right: 10%;
+       height: auto;
     }
 }
 
