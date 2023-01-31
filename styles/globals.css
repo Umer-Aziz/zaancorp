@@ -112,17 +112,3 @@ li {
 .BgLightBlue{
   background-color: var(--bg-circle-lightblue);
 }
-
-/* snooze button  */
-.activeArchive{
-  background: var(--purple) !important;
-  color: var(--white) !important;
-}
-
- /* open Save card css  */
-@media only screen and (max-width:767px){
-  .saveAsViewCardOpen{  
-      bottom: 40% !important;
-      transition: all 0.5s ease-out;
-  }
-}

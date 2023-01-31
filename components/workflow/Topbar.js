@@ -140,12 +140,12 @@ const Topbar = () => {
                   <div className={style.PinnedCardHead}>
                             <div className={style.PinnedHeadLeft}>
                                  <div className={style.archiveBtnWrapper}>
-                                  <button onClick={e => {setIsSnooze(false)}} className={`${style.archiveCardBtn} ${style.archiveBtn} ${!isSnooze && "activeArchive" }`}>
+                                  <button onClick={e => {setIsSnooze(false)}} className={`${style.archiveCardBtn} ${style.archiveBtn} ${!isSnooze && style.activeArchive }`}>
                                  {!isSnooze ? <img width={16} height={16} src="/images/archive-active.png" alt="icon"/>:
                                   <img width={16} height={16} style={{opacity:0.6}} src="/images/archive.png" alt="icon" />}
                                     <span>Archive</span>
                                   </button>
-                                  <button onClick={e => {setIsSnooze(true)}} className={`${style.archiveCardBtn} ${style.snoozeBtn}  ${isSnooze && "activeArchive" }`}>
+                                  <button onClick={e => {setIsSnooze(true)}} className={`${style.archiveCardBtn} ${style.snoozeBtn}  ${isSnooze && style.activeArchive }`}>
                                   { isSnooze ? <img width={16} height={16} src="/images/snooze-active.png" alt="icon" />:
                                   <img width={16} height={16} src="/icons/snooze.svg" alt="icon" />}
                                     <span>Snooze</span>
@@ -478,7 +478,7 @@ const Topbar = () => {
                </div> }
           
           {/* save as view */}
-          {isSaveAsOpen && <div className={`${style.saveAsViewCard} ${isSaveDropDown && "saveAsViewCardOpen"}`}>
+          {isSaveAsOpen && <div className={`${style.saveAsViewCard} ${isSaveDropDown && style.saveAsViewCardOpen}`}>
               <div className={style.saveAsCardContainer}>
                 <div className={style.saveAsHead}>
                   <div className={style.saveAsLeft}>

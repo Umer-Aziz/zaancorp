@@ -1,6 +1,7 @@
 import React,{ useState , useEffect } from 'react'
 import style from "@/styles/sidebar.module.css"
 import Link from 'next/link'
+
 const Sidebar = () => {
     const [ closeSidebar , setcloseSidebar] = useState(false);
     
@@ -20,11 +21,12 @@ const Sidebar = () => {
     
     
     
+    
   return (
     <>
     <div className={`${ closeSidebar ? style.CloseSidebarContainer : style.sidebarContainer  }`}>
-        <aside>
-            <div className={style.logoContainer}>
+        <aside className={`${style.sideBarWrapper} ${!closeSidebar && style.sidebBarBg}`}>
+            <div className={`${style.logoContainer} ${closeSidebar && style.logoContainerClose}`}>
                 <div className={`${style.logoDiv} ${closeSidebar ? "hidden" : "flex"}`}>
                 <div className={style.logoCircle}></div>
                 <span className={style.logoName}>Zaan Corp</span>

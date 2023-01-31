@@ -710,6 +710,12 @@
 .archiveBtn{
     border-radius: 8px 0px 0px 8px;
 }
+/* snooze button  */
+.activeArchive{
+    background: var(--purple) !important;
+    color: var(--white) !important;
+  }
+  
 .archiveCardWrapper{
     background-color: var(--white);
     border-radius: 8px;
@@ -918,7 +924,7 @@
     line-height: 18px;
     color: rgba(7, 15, 33, 0.8);
 }
-
+ 
 @media only screen and (max-width:992px){
     .saveAsViewCard{
         position: fixed;
@@ -938,7 +944,15 @@
     }
 
 }
+ /* open Save card css  */
+ @media only screen and (max-width:767px){
+    .saveAsViewCardOpen{  
+        bottom: 40% !important;
+        transition: all 0.5s ease-out;
+    }
+  }
 
+  
 /* custom scrollbar width */
 .filterByContent::-webkit-scrollbar , .PinnedCardContent::-webkit-scrollbar , .SaveProfileContainer::-webkit-scrollbar {
     width: 4px;
