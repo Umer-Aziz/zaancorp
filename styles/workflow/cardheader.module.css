@@ -256,6 +256,24 @@
         margin: auto;
      }
 }
+@media screen  and (max-width:767px){
+    .filterCardMenu{
+        height: auto;
+        width: 260px;
+        position: fixed;
+        top: 76px;
+        right: 2%;
+
+     }
+     .filterByContent{
+        height: 440px;
+      }
+}
+@media screen  and (max-width:539px){
+    .filterByContent{
+        height: 380px;
+      }
+}
 
  /* custom scrollbar width */
 .filterByContent::-webkit-scrollbar {
