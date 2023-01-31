@@ -721,18 +721,213 @@
     }
 }
 
+
+/* save as view card css  */
+
+.saveAsViewCard{
+    z-index: 2;
+    position: absolute;
+    top: 33vh;
+    left: 12%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+.saveAsCardContainer{
+    z-index: 10;
+    width:581px;
+    height:364px;
+    background-color:var(--white);
+    border: 1px solid rgba(7, 15, 33, 0.1);
+    border-radius: 8px;
+    box-shadow: 0px 12px 24px rgba(174, 178, 193, 0.2);
+}
+.saveAsHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px 22px 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+}
+.saveAsLeft{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.saveAsContent{
+    padding: 30px 24px;
+    border-bottom: 1px solid rgba(7, 15, 33, 0.1);
+    display: grid;
+    gap: 16px;
+}
+.viewNameHead{
+    display: grid;
+    gap: 8px;
+    position: relative;
+}
+.viewLabel{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+.viewInputHead{
+    display: flex;
+    align-items: center;
+    height: 46px;
+    border: 1px solid rgba(7, 15, 33, 0.1);
+    border-radius: 8px;
+}
+.viewColorHead{
+    display: flex;
+    align-items: center;
+    padding:0 8px;
+    gap: 2;
+    height: 100%;
+    border-left: 1px solid rgba(7, 15, 33, 0.1);
+    cursor: pointer;
+}
+.viewColorHead:hover{
+    background-color: var(--bg-gray-sidebar);
+    transition: all 0.3s ease;
+}
+.viewColorHead:hover .chevronHover , .SelectChevron:hover{
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+}
+.SelectChevron{
+    margin-right: 16px;
+    cursor: pointer;
+}
+.viewInput{
+    width: 100%;
+    margin: 0 16px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+.viewInput::placeholder{
+    opacity: 0.4;
+}
+.ViewColor{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+    width: 26px;
+    height: 26px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.ViewColor::-webkit-color-swatch{
+    border-radius: 4px;
+    border: none;
+}
+.SaveBtnWrapper{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 24px;
+    align-items: center;
+}
+.formSaveBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    width: 79px;
+    height: 44px;
+    background: var(--blue);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    outline: none;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.formSaveBtn:hover{
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+}
+.SaveProfileContainer{
+    background-color: var(--white);
+    height: 384px;
+    position: absolute;
+    top: 95%;
+    width:100%;
+    border: 1px solid rgba(7, 15, 33, 0.1);
+    box-shadow: 0px 12px 24px rgba(174, 178, 193, 0.2);
+    border-radius:0 0 8px 8px;
+    border-top: 1px solid var(--blue);
+    padding: 12px 0;
+    overflow:hidden;
+    overflow-y: scroll;
+    display: grid;
+    gap: 4px;
+
+}
+
+.SaveProfileDropdown{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 16px;
+}
+.SaveProfileDropdown:hover{
+    background-color: var(--bg-dropdown-item);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.SavePicWrapper{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(7, 15, 33, 0.8);
+}
+
+@media only screen and (max-width:992px){
+    .saveAsViewCard{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+
+}
+@media only screen and (max-width:767px){
+    .saveAsCardContainer{
+        width:340px;
+    }
+
+}
+
 /* custom scrollbar width */
-.filterByContent::-webkit-scrollbar , .PinnedCardContent::-webkit-scrollbar {
+.filterByContent::-webkit-scrollbar , .PinnedCardContent::-webkit-scrollbar , .SaveProfileContainer::-webkit-scrollbar {
     width: 4px;
   }
   
   /* Track */
- .filterByContent::-webkit-scrollbar-track , .PinnedCardContent::-webkit-scrollbar-track{
+ .filterByContent::-webkit-scrollbar-track , .PinnedCardContent::-webkit-scrollbar-track, .SaveProfileContainer::-webkit-scrollbar-track{
     background: transparent;
   }
   
   /* Handle */
-  .filterByContent::-webkit-scrollbar-thumb , .PinnedCardContent::-webkit-scrollbar-thumb {
+  .filterByContent::-webkit-scrollbar-thumb , .PinnedCardContent::-webkit-scrollbar-thumb , .SaveProfileContainer::-webkit-scrollbar-thumb {
   background: #cdcfd3;
   background-clip: padding-box;
   border-radius: 34px;

@@ -13,6 +13,8 @@ const Topbar = () => {
         const [isPinned, setIsPinned] = useState(false);
         const [isArchive, setIsArchive] = useState(false);
         const [isSnooze,setIsSnooze] = useState(false);
+        const [isSaveAsOpen,setIsSaveAsOpen] = useState(false);
+        const [isSaveDropDown,setIsSaveDropDown] = useState(false);
         const [selected, setSelected] = useState("");
         
         const options = ["Order","Created date","Due Date","Sitting count","Move count"];
@@ -466,7 +468,7 @@ const Topbar = () => {
                     </div>
                      
                      <div className={style.FilterByButtons}>
-                     <button className={`${style.formSubmitBtn} ${style.formPurpleBtn}`}>Save as View</button>
+                     <div onClick={e => {setIsSaveAsOpen(true),setIsFilter(false)}} className={`${style.formSubmitBtn} ${style.formPurpleBtn}`}>Save as View</div>
                      <div className={style.filterByBtnRight}>
                       <button className={style.formSubmitBtn}>Clear</button>
                       <button className={`${style.formSubmitBtn} ${style.FormBlueBtn}`}>Apply</button>
@@ -474,6 +476,62 @@ const Topbar = () => {
                      </div>
                  </form>
                </div> }
+          
+          {/* save as view */}
+          {isSaveAsOpen && <div className={`${style.saveAsViewCard} ${isSaveDropDown && "saveAsViewCardOpen"}`}>
+              <div className={style.saveAsCardContainer}>
+                <div className={style.saveAsHead}>
+                  <div className={style.saveAsLeft}>
+                    <img width={20} height={20} src="/icons/save.svg" alt="save" />
+                    <span>Saved as View</span>
+                  </div>
+                  <img onClick={e => {setIsSaveAsOpen(false)}} className={style.closeIcon} src="/icons/close-gray.svg" alt="icon" />
+              </div>
+              <div className={style.saveAsContent}>
+                <div className={style.viewNameHead}>
+                  <label className={style.ViewLabel} htmlFor="viewName">View Name</label>
+                  <div className={style.viewInputHead}>
+                    <input className={style.viewInput} type="text" placeholder='Enter Name'/>
+                    <label htmlFor='viewColor' className={style.viewColorHead}>
+                      <input className={style.ViewColor} type="color" id='viewColor'/>
+                      <img width={20} height={20} className={style.chevronHover} src="/icons/chevron.svg" alt="icon" />
+                    </label>
+                  </div>
+                </div>
+                <div className={style.viewNameHead}>
+                  <label className={style.ViewLabel} htmlFor="viewName">Share with others</label>
+                  <div className={style.viewInputHead}>
+                    <input className={style.viewInput} type="text" placeholder='Enter or select name'/>
+                      {!isSaveDropDown ? <img onClick={e =>{setIsSaveDropDown(true)}} className={style.SelectChevron} width={22} height={22} src="/icons/chevron.svg" alt="icon" />
+                      :<img onClick={e =>{setIsSaveDropDown(false)}} className={style.SelectChevron} width={22} height={22} src="/icons/chevron-active.svg" alt="icon" />
+                      }
+                  </div>
+                    {/* // user profile dropdown */}
+               { isSaveDropDown && <ul className={style.SaveProfileContainer}>
+                {
+                  names && names.map && names.map(( name,index )=>{
+                    const img = AssignToImages[index]
+                    return(
+                      <li key={index} className={style.SaveProfileDropdown}>
+                      <input width={16} height={16} className={style.filterCardCheckbox} type="checkbox" />
+                      <div className={style.SavePicWrapper}>
+                        <img width={24} height={24} src={`/images/${img}.png`} alt="icon" />
+                        <span>{name}</span>
+                    </div>
+                  </li>
+                    )
+                  })
+                }
+                </ul>}
+                </div>
+                
+              </div>
+              <div className={style.SaveBtnWrapper}>
+                  <button className={style.formSaveBtn}>Save</button>
+                </div>
+              </div>
+              <div className={style.deleteCardWrapper}></div>
+          </div>}
 
         </div>
     </section>
